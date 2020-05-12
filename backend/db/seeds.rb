@@ -8,9 +8,9 @@
 
 Character.create([
     {name: "Roak", age: 35, weight: 220, height: 6.0, sex: "Male", race: "Orc", klass: "Warrior"},
-    {name: "Lara", age: 24, weight: 130, height: 6.0, sex: "Male", race: "Orc", klass: "Warrior"},
-    {name: "Roak", age: 35, weight: 220, height: 6.0, sex: "Male", race: "Orc", klass: "Warrior"},
-    {name: "Roak", age: 35, weight: 220, height: 6.0, sex: "Male", race: "Orc", klass: "Warrior"},
-    {name: "Roak", age: 35, weight: 220, height: 6.0, sex: "Male", race: "Orc", klass: "Warrior"},
+    {name: "Lara", age: 24, weight: 130, height: 5.5, sex: "Female", race: "Human", klass: "Assassin"},
+    {name: "Neerah", age: 120, weight: 125, height: 5.0, sex: "Female", race: "Elf", klass: "Paladin"},
+    {name: "Linshkoma", age: 88, weight: 480, height: 7.5, sex: "Male", race: "Troll", klass: "Healer"},
+    {name: "Hanover", age: 42, weight: 170, height: 3.5, sex: "Male", race: "Dwarf", klass: "Druid"},
 ])
 
