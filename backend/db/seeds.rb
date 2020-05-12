@@ -14,11 +14,17 @@
 #     {name: "Hanover", age: 42, weight: 170, height: 3.5, sex: "Male", race: "Dwarf", klass: "Druid"},
 # ])
 
-Leader.create([
-    {name: "Torn", age: 77, sex: "Male", race: "Troll", rank: "Head of Militia"},
-    {name: "Neyla", age: 147, sex: "Female", race: "Elf", rank: "Head of Archery"},
-    {name: "Hantariff", age: 88, sex: "Male", race: "Dwarf", rank: "Regiment Commander"},
-    {name: "Serena", age: 48, sex: "Female", race: "Human", rank: "Section Commander"},
-    {name: "Alistair", age: 238, sex: "Male", race: "Dark Elf", rank: "Grand Sorcerer"},
-])
+# Leader.create([
+#     {name: "Torn", age: 77, sex: "Male", race: "Troll", rank: "Head of Militia"},
+#     {name: "Neyla", age: 147, sex: "Female", race: "Elf", rank: "Head of Archery"},
+#     {name: "Hantariff", age: 88, sex: "Male", race: "Dwarf", rank: "Regiment Commander"},
+#     {name: "Serena", age: 48, sex: "Female", race: "Human", rank: "Section Commander"},
+#     {name: "Alistair", age: 238, sex: "Male", race: "Dark Elf", rank: "Grand Sorcerer"},
+# ])
+
+Leader.find_by_id(1).update(character_ids: [1, 3])
+Leader.find_by_id(2).update(character_ids: [2, 4])
+Leader.find_by_id(3).update(character_ids: [5])
+Leader.find_by_id(4).update(character_ids: [2, 6])
+Leader.find_by_id(5).update(character_ids: [1, 2, 3, 6])
 
