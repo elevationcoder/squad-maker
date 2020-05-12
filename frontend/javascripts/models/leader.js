@@ -1,5 +1,8 @@
 class Leader {
-    constructor(name, age, sex, race, rank, characters) {
+
+    static all = [];
+
+    constructor(data) {
         this.id = data.id;
         this.name = data.name;
         this.age = data.age;
@@ -7,5 +10,10 @@ class Leader {
         this.race = data.race;
         this.rank = data.rank;
         this.characters = data.characters;
+        this.save();
+    }
+
+    save() {
+        Leader.all.push(this);
     }
 }
