@@ -10,13 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 0) do
-=======
 ActiveRecord::Schema.define(version: 2020_05_12_023758) do
->>>>>>> character
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "characters", force: :cascade do |t|
+    t.string "name"
+    t.string "age"
+    t.string "weight"
+    t.string "height"
+    t.string "sex"
+    t.string "race"
+    t.string "klass"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
 end
