@@ -44,6 +44,6 @@ class CharactersController < ApplicationController
     end
 
     def character_params
-      params.require(:character).permit(:name, :age, :weight, :height, :sex, :race, :klass)
+      params.require(:character).permit(:name, :age, :weight, :height, :sex, :race, :klass, leader_ids: [])
     end
 end
