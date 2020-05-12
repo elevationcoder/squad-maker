@@ -75,5 +75,4 @@ function createCharacter(e) {
         .then((data) => console.log(data))
         
     }
-    addCharacter();
 }
