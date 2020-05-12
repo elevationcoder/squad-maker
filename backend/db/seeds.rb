@@ -7,17 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Character.create([
-    {name: "Roak", age: 35, weight: 220, height: "6 ft", sex: "Male", race: "Orc", klass: "Warrior"},
-    {name: "Roak", age: 35, weight: 220, height: "6 ft", sex: "Male", race: "Orc", klass: "Warrior"},
-    {name: "Roak", age: 35, weight: 220, height: "6 ft", sex: "Male", race: "Orc", klass: "Warrior"},
-    {name: "Roak", age: 35, weight: 220, height: "6 ft", sex: "Male", race: "Orc", klass: "Warrior"},
-    {name: "Roak", age: 35, weight: 220, height: "6 ft", sex: "Male", race: "Orc", klass: "Warrior"},
+    {name: "Roak", age: 35, weight: 220, height: 6.0, sex: "Male", race: "Orc", klass: "Warrior"},
+    {name: "Lara", age: 24, weight: 130, height: 6.0, sex: "Male", race: "Orc", klass: "Warrior"},
+    {name: "Roak", age: 35, weight: 220, height: 6.0, sex: "Male", race: "Orc", klass: "Warrior"},
+    {name: "Roak", age: 35, weight: 220, height: 6.0, sex: "Male", race: "Orc", klass: "Warrior"},
+    {name: "Roak", age: 35, weight: 220, height: 6.0, sex: "Male", race: "Orc", klass: "Warrior"},
 ])
 
-"name": "Roak",
-    "age": "35",
-    "weight": "220",
-    "height": "6 ft",
-    "sex": "Male",
-    "race": "Orc",
-    "klass": "Warrior",

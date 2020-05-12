@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2020_05_12_023758) do
   create_table "characters", force: :cascade do |t|
     t.string "name"
     t.integer "age"
-    t.integer "weight"
+    t.float "weight"
     t.string "height"
     t.string "sex"
     t.string "race"
