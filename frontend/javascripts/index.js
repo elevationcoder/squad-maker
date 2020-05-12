@@ -12,10 +12,17 @@ function getLeaders() {
     fetch(LEADERS_URL)
     .then((resp) => resp.json())
     .then((data) => data.forEach(data => {
-        let leader = new Leader(data)
-        let div = document.getElementById('leader-checkbox')
-        let checkbox = document.createElement('input')
+        let leader = new Leader(data);
+        let div = document.getElementById('leader-checkbox');
+        let checkbox = document.createElement('input');
+        let label = document.createElement('label');
+        label.setAttribute('for', `leader-${leader.id}`);
+        label.innerHTML = leader.name
+        checkbox.id = `leader-${leader.id}`;
         checkbox.type = "checkbox"
-        debugger;
+        checkbox.value = leader.id
+        div.appendChild(checkbox);
+        div.appendChild(label);
+        
     }));
 }
