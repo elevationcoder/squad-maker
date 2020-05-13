@@ -62,7 +62,10 @@ function deleteCharacter(e, id) {
             "Content-Type": "application/json"
         },
     }).then(resp => resp.json())
-    .then((data) => console.log(data))
+    .then((data) => {
+        console.log(data);
+        e.target.parentNode.remove()
+    })
 }
 
 // GET LEADER SELECTION CHECKBOXES
@@ -130,7 +133,7 @@ function createCharacter(e) {
             },
             body: JSON.stringify(strongParams)
         }).then(resp => resp.json())
-        .then((data) => console.log(data))
+        .then(data => console.log(data))
         
     }
 
