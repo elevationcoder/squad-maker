@@ -35,6 +35,7 @@ class CharactersController < ApplicationController
 
   
   def destroy
+    binding.pry
     @character.destroy
   end
 

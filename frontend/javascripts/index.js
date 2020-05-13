@@ -44,6 +44,25 @@ function showCard(obj) {
         let br = document.createElement('br');
         div.appendChild(br)
         cardContainer.appendChild(div);
+
+        let dropButton = document.createElement('button');
+        dropButton.setAttribute('for', "drop")
+        dropButton.setAttribute("character-data-id", `${obj.id}`)
+        dropButton.innerText = "Drop"
+        p.prepend(dropButton)
+
+        dropButton.addEventListener('click', (e) => deleteCharacter(e, obj.id)) 
+}
+function deleteCharacter(e, id) {
+    console.log(id)
+    fetch(`${CHARACTERS_URL}/${id}`, {
+        method: "DELETE",
+        headers: {
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+        },
+    }).then(resp => resp.json())
+    .then((data) => console.log(data))
 }
 
 // GET LEADER SELECTION CHECKBOXES
@@ -114,4 +133,6 @@ function createCharacter(e) {
         .then((data) => console.log(data))
         
     }
+
+    
 }
