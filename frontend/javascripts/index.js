@@ -7,6 +7,20 @@ document.addEventListener('DOMContentLoaded', function() {
     getLeaders();
 })
 
+function getCharacters() {
+    fetch(CHARACTERS_URL, {
+        method: "GET",
+        headers: {
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+        },
+    }).then(resp => resp.json())
+    .then((data) => data.forEach(data => {
+        
+    }));
+}
+
+
 
 function getLeaders() {
     fetch(LEADERS_URL)
