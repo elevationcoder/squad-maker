@@ -18,14 +18,33 @@ function getCharacters() {
     }).then(resp => resp.json())
     .then((data) => data.forEach(data => {
         let character = new Character(data);
-        let cardContainer = document.querySelector('#card-container');
+        let cardContainer = document.querySelector('main');
         let div = document.createElement('div')
         div.id ="card";
         div.setAttribute('data-id', `${character.name}`);
-
-        // let p = document.createElement()
-        
+// CARD CONTENT
+        let p = document.createElement('p')
+        p.innerText = `Name: ${character.name}
+         Age: ${character.age} 
+         Weight: ${character.weight} 
+         Height: ${character.height} 
+         Sex: ${character.sex} 
+         Race: ${character.race} 
+         Class: ${character.class}`
+        div.appendChild(p)
+        let br = document.createElement('br');
+        div.appendChild(br)
         cardContainer.appendChild(div);
+//
+        // let ul = document.createElement('ul')
+        // character.forEach(c => {
+        //     let li = document.createElement('li');
+        //     li.setAttribute('data-id', `${c.id}`);
+        //     let dropButton = document.createElement('button');
+        //     dropButton.setAttribute('for', "drop")
+        //     dropButton.setAttribute("character-data-id", `${c.id}`)
+        //     dropButton.innerText = "Drop"
+        // })
     }));
 }
 
@@ -52,7 +71,7 @@ function getLeaders() {
     document.querySelector('form').addEventListener('submit', createCharacter);
 
 }
-
+// NEW CHARACTER SUBMISSION
 function createCharacter(e) {
     e.preventDefault();
 
@@ -64,7 +83,7 @@ function createCharacter(e) {
     const race = document.getElementById('race').value
     const klass = document.getElementById('klass').value
     const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-
+// UPDATES DB WITH LEADER_IDS
     const leader_ids = [];
     for (let i = 0; i < checkboxes.length; i++) {
         if(checkboxes[i].checked) {
@@ -84,7 +103,7 @@ function createCharacter(e) {
             leader_ids
         }
     }
-
+//AJAX POST TO DB
     function addCharacter() {
         fetch(CHARACTERS_URL, {
             method: "POST",
