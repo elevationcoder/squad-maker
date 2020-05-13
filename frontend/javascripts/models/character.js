@@ -11,6 +11,7 @@ class Character {
         this.race = data.race;
         this.class = data.klass
         this.save();
+        
     }
 
     save(){
