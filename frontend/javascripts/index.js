@@ -2,11 +2,12 @@ const BASE_URL = "http://localhost:3000"
 const LEADERS_URL = `${BASE_URL}/leaders`
 const CHARACTERS_URL = `${BASE_URL}/characters`
 
-
+//ONLOAD
 document.addEventListener('DOMContentLoaded', function() {
     getLeaders();
+    getCharacters();
 })
-
+// SHOW CHARACTERS
 function getCharacters() {
     fetch(CHARACTERS_URL, {
         method: "GET",
@@ -16,12 +17,19 @@ function getCharacters() {
         },
     }).then(resp => resp.json())
     .then((data) => data.forEach(data => {
+        let character = new Character(data);
+        let cardContainer = document.querySelector('#card-container');
+        let div = document.createElement('div')
+        div.id ="card";
+        div.setAttribute('data-id', `${character.name}`);
+
+        // let p = document.createElement()
         
+        cardContainer.appendChild(div);
     }));
 }
 
-
-
+// GET LEADER SELECTION CHECKBOXES
 function getLeaders() {
     fetch(LEADERS_URL)
     .then((resp) => resp.json())

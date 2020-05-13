@@ -11,12 +11,16 @@ class Character {
         this.race = data.race;
         this.class = data.klass
         this.save();
-        
+
     }
 
     save(){
         Character.all.push(this)
     }
+
+    // charInfo() {
+    //     return 
+    // }
 }
 
 
