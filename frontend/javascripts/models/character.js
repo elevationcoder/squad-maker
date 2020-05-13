@@ -2,14 +2,15 @@ class Character {
 
     static all =[]
 
-    constructor(data) {
-        this.name = data.name;
-        this.age = data.age;
-        this.weight = data.weight;
-        this.height = data.height;
-        this.sex = data.sex;
-        this.race = data.race;
-        this.class = data.klass
+    constructor({name, age, weight, height, sex, race, klass, leaders}) {
+        this.name = name;
+        this.age = age;
+        this.weight = weight;
+        this.height = height;
+        this.sex = sex;
+        this.race = race;
+        this.class = klass
+        this.leaders = leaders
         this.save();
 
     }
