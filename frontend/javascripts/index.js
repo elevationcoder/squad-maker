@@ -139,4 +139,5 @@ function createCharacter(e) {
     }
 
     addCharacter();
-}
+};
+
