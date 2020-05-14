@@ -36,6 +36,15 @@ class CharactersController < ApplicationController
   
   def destroy
     @character.destroy
+    if Character.all.find_by(id: @character.id).nil?
+      render json: {
+        message: "Succes"
+      }
+    else
+      render json: {
+        message: "Error"
+      }
+    end
   end
 
   private

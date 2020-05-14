@@ -60,12 +60,22 @@ function deleteCharacter(e, id) {
         headers: {
             "Accept": "application/json",
             "Content-Type": "application/json"
-        },
-    }).then(resp => resp.json())
-    .then((data) => {
-        console.log(data);
-        e.target.parentNode.remove()
-    })
+        }
+    }).then(resp=>resp.json())
+    .then(data => validateCharDestroy(data, e))
+    // debugger
+}
+
+function validateCharDestroy(data, e)
+{
+    if(data.error)
+    {
+        alert("Deletion failed!");
+    }
+    else
+    {
+        e.target.parentNode.parentNode.remove()
+    }
 }
 
 // GET LEADER SELECTION CHECKBOXES
@@ -144,8 +154,3 @@ function createCharacter(e) {
     addCharacter();
 };
 
-function showNewCharacter(obj) {
-    const main = document.querySelector('main')
-    let newDiv = document.createElement('div')
-    console.log(main)
-}
