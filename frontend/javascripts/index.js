@@ -134,10 +134,18 @@ function createCharacter(e) {
             },
             body: JSON.stringify(strongParams)
         }).then(resp => resp.json())
-        .then(data => console.log(data))
+        .then((data) => {
+            console.log(data)
+            showCard(data)}
+        );
         
     }
 
     addCharacter();
 };
 
+function showNewCharacter(obj) {
+    const main = document.querySelector('main')
+    let newDiv = document.createElement('div')
+    console.log(main)
+}
