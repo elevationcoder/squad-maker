@@ -5,6 +5,8 @@ This application let's you build your very own DnD fantasy squad!! Follow along 
 ## Get Started
 
 On the main page you will see an empty screen aside from the new character form and a list of current squad leaders. You are the Battalion Commander and it is your job to select and or create the perfect characters for each leader's squad. To add a new character follow the next step.
+<br>
+
 <img src='READMEsnippets/Blank_start_screen.png'>
 
 <hr>
