@@ -1,47 +1,37 @@
 class Character {
+  static all = [];
 
-    static all =[]
+  constructor({
+    name,
+    age,
+    weight,
+    height,
+    sex,
+    race,
+    klass,
+    leaders,
+    review,
+  }) {
+    this.name = name;
+    this.age = age;
+    this.weight = weight;
+    this.height = height;
+    this.sex = sex;
+    this.race = race;
+    this.class = klass;
+    this.leaders = leaders;
+    this.review = review;
+    this.save();
+  }
 
-    constructor({name, age, weight, height, sex, race, klass, leaders}) {
-        this.name = name;
-        this.age = age;
-        this.weight = weight;
-        this.height = height;
-        this.sex = sex;
-        this.race = race;
-        this.class = klass
-        this.leaders = leaders
-        this.save();
+  save() {
+    Character.all.push(this);
+  }
 
-    }
-
-    save(){
-        Character.all.push(this)
-    }
-
-    // charInfo() {
-    //     return 
-    // }
+  // charInfo() {
+  //     return
+  // }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // t.string "name"
 //     t.integer "age"

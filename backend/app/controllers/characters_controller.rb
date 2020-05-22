@@ -3,6 +3,7 @@ class CharactersController < ApplicationController
 
   
   def index
+    # binding.pry
     @characters = Character.all
 
     render json: @characters, include: :leaders
@@ -10,13 +11,15 @@ class CharactersController < ApplicationController
 
   
   def show
+    # binding.pry
     render json: @character, include: :leaders
   end
 
   
   def create
+    # binding.pry
     @character = Character.new(character_params)
-
+    # binding.pry
     if @character.save
       render json: @character, include: :leaders, status: :created, location: @character
     else
@@ -26,8 +29,10 @@ class CharactersController < ApplicationController
 
   
   def update
-    if @character.update(character_params)
-      render json: @character
+    # binding.pry
+    if @character.review = params[:character][:review]
+      @character.save
+      render json: @character, include: :leaders
     else
       render json: @character.errors, include: :leaders, status: :unprocessable_entity
     end
@@ -56,3 +61,51 @@ class CharactersController < ApplicationController
       params.require(:character).permit(:name, :age, :weight, :height, :sex, :race, :klass, leader_ids: [])
     end
 end
+
+
+# function scopey(){
+#   var a = "first Value"
+#   let b = "first Value"
+#   const c = "first Value"
+#   d = "first Value"
+
+#   if (true) {
+#     var a = "second Value"
+#     let b = "second Value"
+#     const c = "second Value"
+#     d = "second Value"
+#   }
+
+#   console.log(a)
+#   console.log(b)
+#   console.log(c)
+#   console.log(d)
+# }
+
+# function sayName(){
+#   console.log("my name is", theName)
+
+#   var theName = "Jane Doe"
+# }
+# sayName()
+
+
+
+# function sayName(){
+#   console.log("my name is", theName)
+
+#   let theName = "Jane Doe"
+# }
+# sayName()
+
+
+
+
+# function sayName(){
+#   console.log("my name is", theName())
+
+#   function theName() {
+#     return "Jane Doe"
+#   }
+# }
+# sayName()
